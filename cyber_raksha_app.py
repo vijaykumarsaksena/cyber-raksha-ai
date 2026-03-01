@@ -996,7 +996,7 @@ def show_app():
                 render_speech_to_text(key="chat_stt", lang="hi-IN")
                 render_voice_query(key="chat_vq")
                 st.caption("💡 Chrome browser में बेहतर काम करता है।")
-                        st.session_state["chat_history"].append(
+                st.session_state["chat_history"].append(
                             {"role": "assistant", "content": resp.content[0].text}
                         )
             if st.session_state.get("chat_history"):
