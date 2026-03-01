@@ -1,0 +1,13 @@
+flask
+twilio
+python-dotenv
+easyocr
+gtts
+fpdf2
+pillow
+numpy
+streamlit
+pandas
+anthropic
+openpyxl
+pyttsx3

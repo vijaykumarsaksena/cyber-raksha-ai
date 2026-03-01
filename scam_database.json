@@ -1,0 +1,207 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "updated": "2026-02-25",
+    "source": "TRAI + Bihar Police Cyber Cell + MHA Reports",
+    "note": "Weekly update करें। Format: add new entries, update 'updated' date।"
+  },
+
+  "scam_phones": [
+    {"number": "1800110001", "type": "fake_bank", "detail": "Fake SBI helpline", "reported": "2025-12"},
+    {"number": "1800103333", "type": "fake_bank", "detail": "Fake HDFC helpline", "reported": "2025-11"},
+    {"number": "9304XXXXXX", "type": "kbc_fraud", "detail": "KBC lottery fraud Bihar", "reported": "2025-10"},
+    {"number": "8986XXXXXX", "type": "job_fraud", "detail": "Fake job offer Patna", "reported": "2025-12"},
+    {"number": "7004XXXXXX", "type": "investment", "detail": "Fake crypto investment", "reported": "2026-01"},
+    {"number": "9955XXXXXX", "type": "loan_fraud", "detail": "Fake loan app Bihar", "reported": "2026-01"},
+    {"number": "8789XXXXXX", "type": "sim_swap", "detail": "SIM swap fraud Muzaffarpur", "reported": "2026-02"},
+    {"number": "+923001234567", "type": "kbc_fraud", "detail": "Pakistan KBC scam", "reported": "2025-09"},
+    {"number": "+14085551234", "type": "lottery", "detail": "US lottery scam", "reported": "2025-11"}
+  ],
+
+  "scam_urls": [
+    {"url": "sbi-kyc-update.tk", "type": "phishing", "target": "SBI", "reported": "2026-01"},
+    {"url": "hdfc-bank-login.ml", "type": "phishing", "target": "HDFC", "reported": "2026-01"},
+    {"url": "pm-kisan-yojana.xyz", "type": "govt_impersonation", "target": "PM Kisan", "reported": "2025-12"},
+    {"url": "free-jio-recharge.top", "type": "fake_offer", "target": "Jio", "reported": "2025-11"},
+    {"url": "bitcoin-double.site", "type": "crypto_fraud", "target": "Crypto", "reported": "2026-02"},
+    {"url": "paytm-cashback-offer.online", "type": "fake_offer", "target": "Paytm", "reported": "2025-10"},
+    {"url": "income-tax-refund.click", "type": "tax_fraud", "target": "Income Tax", "reported": "2026-01"},
+    {"url": "whatsapp-gold-download.cf", "type": "malware", "target": "WhatsApp", "reported": "2025-08"},
+    {"url": "amazon-lucky-winner.ga", "type": "fake_offer", "target": "Amazon", "reported": "2025-09"}
+  ],
+
+  "scam_patterns": [
+    {
+      "id": "kbc_001",
+      "name": "KBC Lottery Fraud",
+      "lang": ["hi", "bho", "mai", "en"],
+      "patterns": [
+        "kaun banega crorepati",
+        "kbc lottery winner",
+        "आप KBC के विजेता",
+        "KBC में जीत गए",
+        "रु. 25,00,000",
+        "Sony TV lottery"
+      ],
+      "risk": 8,
+      "advice_hi": "KBC कभी फोन या WhatsApp से संपर्क नहीं करता। यह 100% फ्रॉड है।",
+      "advice_en": "KBC never contacts via phone/WhatsApp. This is 100% fraud."
+    },
+    {
+      "id": "bank_kyc_001",
+      "name": "Fake Bank KYC",
+      "lang": ["hi", "en", "ur"],
+      "patterns": [
+        "your account will be blocked",
+        "kyc update required",
+        "आपका खाता बंद होगा",
+        "केवाईसी अपडेट करें",
+        "आپ کا اکاؤنٹ بند",
+        "24 hours mein kyc"
+      ],
+      "risk": 9,
+      "advice_hi": "बैंक कभी KYC के लिए link नहीं भेजता। Branch जाएं।",
+      "advice_en": "Banks never send KYC links. Visit your branch."
+    },
+    {
+      "id": "job_fraud_001",
+      "name": "Fake Job Offer Bihar",
+      "lang": ["hi", "bho"],
+      "patterns": [
+        "घर बैठे काम",
+        "daily 500 rupee",
+        "part time job whatsapp",
+        "data entry job ghar se",
+        "ghar baithe kaam",
+        "रोज 500 रुपए कमाएं"
+      ],
+      "risk": 7,
+      "advice_hi": "कोई भी असली नौकरी WhatsApp पर नहीं मिलती। सरकारी job portal देखें।",
+      "advice_en": "No real job is offered via WhatsApp. Check govt job portals."
+    },
+    {
+      "id": "investment_001",
+      "name": "Crypto / Investment Fraud",
+      "lang": ["hi", "en"],
+      "patterns": [
+        "guaranteed 30% returns",
+        "bitcoin double",
+        "trading signal free",
+        "invest 1000 get 5000",
+        "1000 लगाओ 5000 पाओ",
+        "guaranteed profit"
+      ],
+      "risk": 9,
+      "advice_hi": "कोई भी निवेश guaranteed return नहीं देता। SEBI registered advisor से मिलें।",
+      "advice_en": "No investment guarantees returns. Consult SEBI registered advisor."
+    },
+    {
+      "id": "sextortion_001",
+      "name": "Sextortion / Blackmail",
+      "lang": ["hi", "en"],
+      "patterns": [
+        "video viral karunga",
+        "video leak karunga",
+        "वीडियो वायरल",
+        "अश्लील वीडियो",
+        "obscene video",
+        "pay or I will share"
+      ],
+      "risk": 10,
+      "advice_hi": "घबराएं नहीं। 1930 पर call करें। पैसे कभी न दें — यह और बढ़ेगा।",
+      "advice_en": "Don't panic. Call 1930. Never pay — it only escalates."
+    },
+    {
+      "id": "courier_001",
+      "name": "Fake Courier / Custom Duty",
+      "lang": ["hi", "en"],
+      "patterns": [
+        "your parcel held at customs",
+        "courier customs duty pending",
+        "आपका पार्सल रोका गया",
+        "custom duty pay karo",
+        "FedEx customs clearance"
+      ],
+      "risk": 8,
+      "advice_hi": "कोई भी courier customs के लिए phone पर payment नहीं मांगती।",
+      "advice_en": "No courier asks for customs payment over phone."
+    }
+  ],
+
+  "safe_domains": [
+    "sbi.co.in", "onlinesbi.sbi",
+    "hdfcbank.com", "netbanking.hdfc.com",
+    "icicibank.com", "imobile.icicibank.com",
+    "axisbank.com", "kotakbank.com",
+    "paytm.com", "phonepe.com",
+    "google.com", "apple.com",
+    "amazon.in", "flipkart.com",
+    "irctc.co.in", "incometax.gov.in",
+    "uidai.gov.in", "npci.org.in",
+    "cybercrime.gov.in", "mha.gov.in"
+  ],
+
+  "tips": {
+    "hi": [
+      "🔐 OTP कभी किसी को न दें — बैंक भी नहीं!",
+      "🔗 अनजान लिंक पर क्लिक न करें।",
+      "📱 सिर्फ Play Store / App Store से ऐप डाउनलोड करें।",
+      "💸 कोई भी सरकारी योजना एडवांस नहीं मांगती।",
+      "🔒 मजबूत पासवर्ड — 12+ अक्षर, नंबर और चिह्न।",
+      "📞 KYC के नाम पर आई कॉल तुरंत काटें।",
+      "🎰 बिना हिस्सा लिए लॉटरी नहीं जीत सकते।",
+      "🏦 बैंक कभी link नहीं भेजता — branch जाएं।",
+      "👀 Payment करने से पहले UPI ID दोबारा जाँचें।",
+      "📸 Screen share कभी किसी को न करें।"
+    ],
+    "bho": [
+      "🔐 OTP केहू के मत बताईं — बैंक के भी नाहीं!",
+      "🔗 अनजान link पर क्लिक मत करीं।",
+      "💸 सरकारी योजना में पहिले पईसा नइखे देना पड़त।",
+      "📞 KYC के नाम पर आइल call तुरंते काट दीं।",
+      "🎰 बिना खेलले लॉटरी नइखे जीतात।"
+    ],
+    "mai": [
+      "🔐 OTP केओ नहि दिअ — बैंक केँ सेहो नहि!",
+      "🔗 अनचिन्हार link पर click नहि करू।",
+      "💸 सरकारी योजनामे पहिने पैसा नहि लेल जाइत।",
+      "📞 KYC के नाम पर आयल call तुरंत काटू।",
+      "🏦 बैंक कहियो link नहि पठबैत — branch जाउ।"
+    ],
+    "ur": [
+      "🔐 OTP کسی کو نہ بتائیں — بینک کو بھی نہیں!",
+      "🔗 انجان لنک پر کلک نہ کریں۔",
+      "💸 کوئی سرکاری اسکیم پیشگی رقم نہیں مانگتی۔",
+      "📞 KYC کے نام پر آئی کال فوری کاٹ دیں۔",
+      "🎰 بغیر شرکت کے لاٹری نہیں جیتی جا سکتی۔"
+    ],
+    "mag": [
+      "🔐 OTP केकरो मत बताओ — बैंक केरो भी नञ!",
+      "🔗 अनजान link पर click मत करो।",
+      "💸 सरकारी योजना में पहिले पईसा नञ देना पड़ेला।",
+      "📞 KYC केरो नाम पर आयल call तुरंत काटो।",
+      "🏦 बैंक कभी link नञ भेजेला — branch जाओ।"
+    ],
+    "en": [
+      "🔐 Never share OTP with anyone — not even your bank!",
+      "🔗 Never click on unknown links.",
+      "📱 Download apps only from Play Store / App Store.",
+      "💸 No government scheme asks for advance payment.",
+      "🔒 Use strong passwords — 12+ chars with numbers & symbols.",
+      "📞 Hang up immediately on KYC calls.",
+      "🎰 You can't win a lottery you didn't enter.",
+      "🏦 Banks never send login links — visit the branch.",
+      "👀 Always verify UPI ID before paying.",
+      "📸 Never share your screen with anyone."
+    ]
+  },
+
+  "helplines": {
+    "hi": "📞 *साइबर हेल्पलाइन*\n\n🆘 *1930* — राष्ट्रीय साइबर क्राइम हेल्पलाइन (24×7)\n🌐 *cybercrime.gov.in* — ऑनलाइन शिकायत\n👮 *100* — पुलिस इमरजेंसी\n\n_फ्रॉड होने पर पहले बैंक को कॉल करें, फिर 1930।_",
+    "bho": "📞 *साइबर हेल्पलाइन*\n\n🆘 *1930* — राष्ट्रीय साइबर क्राइम हेल्पलाइन (24×7)\n🌐 *cybercrime.gov.in*\n👮 *100* — पुलिस\n\n_ठगी होखे त पहिले बैंक के call करीं, फिर 1930।_",
+    "mai": "📞 *साइबर हेल्पलाइन*\n\n🆘 *1930* — राष्ट्रीय साइबर क्राइम हेल्पलाइन (24×7)\n🌐 *cybercrime.gov.in*\n👮 *100* — पुलिस\n\n_ठगी भेलापर पहिने बैंक केँ call करू, फिर 1930।_",
+    "ur": "📞 *سائبر ہیلپ لائن*\n\n🆘 *1930* — قومی سائبر کرائم ہیلپ لائن (24×7)\n🌐 *cybercrime.gov.in*\n👮 *100* — پولیس\n\n_فراڈ ہونے پر پہلے بینک کو کال کریں، پھر 1930۔_",
+    "mag": "📞 *साइबर हेल्पलाइन*\n\n🆘 *1930* — राष्ट्रीय साइबर क्राइम हेल्पलाइन (24×7)\n🌐 *cybercrime.gov.in*\n👮 *100* — पुलिस\n\n_ठगी होयल त पहिले बैंक केरो call करो, तब 1930।_",
+    "en": "📞 *Cyber Helpline*\n\n🆘 *1930* — National Cyber Crime Helpline (24×7)\n🌐 *cybercrime.gov.in* — File complaint online\n👮 *100* — Police Emergency\n\n_If fraud occurs, first call your bank, then 1930._"
+  }
+}
